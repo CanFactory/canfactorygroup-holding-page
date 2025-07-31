@@ -10,7 +10,8 @@
     font-style: normal;
     font-weight: 400;
     font-display: swap; /* Ensures text is visible while the font loads */
-    src: url("fonts/open-sans-v40-latin-regular.woff2") format("woff2"); /* Path to local font */
+    src: url("open-sans-v43-latin/open-sans-v43-latin-regular.woff2")
+        format("woff2"); /* Path to local font */
 }
 
 /* Semi-bold 600 weight */
@@ -19,7 +20,8 @@
     font-style: normal;
     font-weight: 600;
     font-display: swap;
-    src: url("fonts/open-sans-v40-latin-600.woff2") format("woff2"); /* Path to local font */
+    src: url("open-sans-v43-latin/open-sans-v43-latin-600.woff2")
+        format("woff2"); /* Path to local font */
 }
 
 /* --- Reset and Global Styles --- */
