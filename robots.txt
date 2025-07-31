@@ -1,0 +1,3 @@
+# Holding Page Only - Tell all web crawlers to not index any part of the site.
+User-agent: *
+Disallow: /
