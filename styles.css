@@ -1,34 +1,69 @@
-/* Importing the fonts */
-@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&display=swap');
+/* --- Local Font Definitions --- */
+/*
+  - These rules define the locally hosted 'Open Sans' font.
+  - This avoids a network request to Google Fonts, which improves load time.
+*/
 
-body, html {
-    margin: 0;
-    padding: 0;
-    height: 100%;
-    font-family: 'Open Sans', sans-serif;
+/* Regular 400 weight */
+@font-face {
+    font-family: "Open Sans";
+    font-style: normal;
+    font-weight: 400;
+    font-display: swap; /* Ensures text is visible while the font loads */
+    src: url("fonts/open-sans-v40-latin-regular.woff2") format("woff2"); /* Path to local font */
 }
 
+/* Semi-bold 600 weight */
+@font-face {
+    font-family: "Open Sans";
+    font-style: normal;
+    font-weight: 600;
+    font-display: swap;
+    src: url("fonts/open-sans-v40-latin-600.woff2") format("woff2"); /* Path to local font */
+}
+
+/* --- Reset and Global Styles --- */
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+body,
+html {
+    margin: 0;
+    padding: 0;
+    font-family: "Open Sans", sans-serif;
+}
+
+/* --- Body and Layout --- */
 body {
-    background: url('background.jpg') no-repeat center center fixed;
+    display: flex;
+    align-items: center; /* Vertically centres the content */
+    justify-content: center; /* Horizontally centres the content */
+    min-height: 100vh;
+    padding: 20px;
+    background: url("background.jpg") no-repeat center center fixed;
     background-size: cover;
 }
 
+/* --- Main Content Container --- */
 .container {
     text-align: center;
     color: white;
-    background: rgba(0, 0, 0, 0.5); /* Adding a semi-transparent background for better text visibility */
-    padding: 20px;
-    max-width: 600px;
-    margin: auto;
-    margin-top: 10%;
+    background: rgba(0, 0, 0, 0.5);
+    padding: 20px 40px;
     border-radius: 10px;
+    max-width: 600px;
 }
 
+/* --- Logo Styling --- */
 .logo img {
     max-width: 100px;
     margin-bottom: 20px;
 }
 
+/* --- Typography --- */
 h1 {
     font-size: 2.5em;
     margin: 10px 0;
@@ -46,9 +81,10 @@ h3 {
 
 p {
     font-size: 1em;
-    margin: 5px 0;
+    margin: 10px 0;
 }
 
+/* --- Link Styling --- */
 a {
     color: #f1c40f;
     text-decoration: none;
